@@ -22,7 +22,5 @@ Example:
 
 ```
   pelicanconf.py
-  
-  ARTICLES_LIST = { 'count':2, filename:'some_other_name' }
-  
+  ARTICLES_LIST = { 'count':2, 'filename':'some_other_name' }
 ```
