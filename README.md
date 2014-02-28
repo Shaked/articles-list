@@ -12,10 +12,10 @@ In order to override the default configuration a variable called ```ARTICLES_LIS
 
 The available settings are: 
 
-- output_path - Ability to use another root instead of the default one (default: the output directory, OUTPUT_PATH)
-- base - Base path of where the files will be created (default: /articles_list/)
-- filename - Base name for the files that will be created (default: articles_list)
-- count - count of articles per file (default: length of all articles togehter) 
+- **output_path** - Ability to use another root instead of the default one (default: the output directory, OUTPUT_PATH)
+- **base** - Base path of where the files will be created (default: */articles_list/*)
+- **filename** - Base name for the files that will be created (default: *articles_list*)
+- **count** - count of articles per file (default: *length of all articles togehter*) 
   
 Example:
 
@@ -24,6 +24,5 @@ Example:
   pelicanconf.py
   
   ARTICLES_LIST = { 'count':2, filename:'some_other_name' }
-  
   
 ```
