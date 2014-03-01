@@ -1,12 +1,17 @@
-Pelicn Articles List
+Pelican Articles List
 ====================
 
 Pelican static web generator plugin that generates a file/files containing articles list with different parameters. 
 
 This will allow the ability to set up ajax requests and together with that the ability to support endless scrolling 
 
+### Requirements (Tested with)
 
-## Configuration
+- Python 2.7.5
+- Pelican 3.3.0
+- [Mock - Mocking and Testing Library](http://www.voidspace.org.uk/python/mock/), Installation is easy: ```sudo pip install -U mock``` 
+
+### Configuration
 
 In order to override the default configuration a variable called ```ARTICLES_LIST``` has to be created inside ```pelicanconf.py```
 
@@ -18,7 +23,6 @@ The available settings are:
 - **count** - count of articles per file (default: *length of all articles togehter*) 
   
 Example:
-
 
 ```
   pelicanconf.py

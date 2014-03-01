@@ -3,6 +3,9 @@ class ArticlesListSettings():
 	def get(self,pelican_settings, articles_total_count):
 	    articles_list_settings = {} 
 	    pelican_settings_articles_list = pelican_settings.get("ARTICLES_LIST")
+	    if not pelican_settings_articles_list: 
+	    	pelican_settings_articles_list = {} 
+
 	    # Directory Path
 	    if 'output_path' in pelican_settings_articles_list:
 	      path = pelican_settings_articles_list['output_path']
@@ -28,13 +31,11 @@ class ArticlesListSettings():
 	    #articles count per page 
 	    if 'count_per_page' in pelican_settings_articles_list:
 	      count_per_page = pelican_settings_articles_list['count_per_page']
-	      file_num = 1
 	    else: 
 	      count_per_page = articles_total_count
-	      file_num = 0
 
 	    articles_list_settings['count_per_page'] = count_per_page
-	    articles_list_settings['file_num'] = file_num
+	    articles_list_settings['articles_total_count'] = articles_total_count
 
 	    # article attributes
 	    if 'article_attrs' in pelican_settings_articles_list:
