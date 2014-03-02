@@ -60,7 +60,7 @@ class CreatorTests(unittest.TestCase):
         articles_total_count = len(articles)
         articles_list_settings = self.getSettings(articles_total_count, articles_list_settings_override)
         actual = self.getCreator().run(articles, articles_list_settings, self.parser)
-        self.assertItemsEqual(sorted(actual), sorted(expected))
+        self.assertEqual(sorted(actual), sorted(expected))
 
     def getSettings(self, articles_total_count, articles_list_settings_override):
         s = settings.ArticlesListSettings()

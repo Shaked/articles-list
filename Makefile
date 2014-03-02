@@ -6,17 +6,27 @@ help:
 	@echo '   make coverage                 	run unit test, coverage and open browser'
 
 
-install: 
+install-2.7: 
+	sudo pip install pelican
 	sudo pip install -U mock
 	sudo pip install nose
 	sudo pip install coverage
 
+install-3.3: 
+	sudo pip3 install pelican
+	sudo pip3 install -U mock
+	sudo pip3 install nose
+	sudo pip3 install coverage
+
 clean: 
 	rm -rf cover/
 
-test: 
+_python3_tests_fix:
+	export PYTHONPATH=`pwd` # https://github.com/nose-devs/nose/issues/538 (python3.3 fails to find)
+
+test:  _python3_tests_fix
 	nosetests -s
 
-coverage: 
+coverage: _python3_tests_fix
 	nosetests --cover-html --with-coverage
 	open cover/index.html

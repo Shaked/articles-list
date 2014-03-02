@@ -63,7 +63,7 @@ class ArticlesListSettingsTests(unittest.TestCase):
     def _testGet(self, override_settings, expected, articles_total_count):
         pelican_settings = read_settings(override=override_settings)
         actual = self.settings.get(pelican_settings, articles_total_count)
-        self.assertItemsEqual(sorted(actual), sorted(expected))
+        self.assertEqual(sorted(actual), sorted(expected))
 
 
 def main():
