@@ -9,7 +9,11 @@ This will allow the ability to set up ajax requests and together with that the a
 
 - Python 2.7.5
 - Pelican 3.3.0
-- [Mock - Mocking and Testing Library](http://www.voidspace.org.uk/python/mock/), Installation is easy: ```sudo pip install -U mock``` 
+
+#### Unit test
+- [Mock - Mocking and Testing Library](http://www.voidspace.org.uk/python/mock/), Installation (pip): ```sudo pip install -U mock```
+- [Nose](https://nose.readthedocs.org/en/latest/), Installation (pip): ```pip install nose```
+- [Coverage](http://nedbatchelder.com/code/coverage/) Installation (pip): ```pip install coverage```
 
 ### Configuration
 
