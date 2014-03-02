@@ -8,7 +8,7 @@ help:
 
 install: 
 	sudo pip install -U mock
-	udo  pip install nose
+	sudo pip install nose
 	sudo pip install coverage
 
 clean: 
