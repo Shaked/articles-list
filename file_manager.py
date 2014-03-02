@@ -6,7 +6,7 @@ class FileManager():
         self.saved_articles = {}
 
     def save(self, articles_list_full_path, file_num, articles_list):
-        self.save_file()
+        self.save_file(articles_list_full_path, file_num, articles_list)
         self.saved_articles[file_num] = articles_list
 
     def save_file(self, articles_list_full_path, file_num, articles_list):
