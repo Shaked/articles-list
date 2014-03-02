@@ -4,6 +4,5 @@ python:
   - "3.3"
 install:
   - "make install-2.7"
-  - "make install-3.3"
 # command to run tests
 script: make test
