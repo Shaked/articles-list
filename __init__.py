@@ -1,1 +1,1 @@
-from .articles_list import *
+from .articles_list  import *

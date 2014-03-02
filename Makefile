@@ -21,12 +21,9 @@ install-3.3:
 clean: 
 	rm -rf cover/
 
-_python3_tests_fix:
-	export PYTHONPATH=`pwd` # https://github.com/nose-devs/nose/issues/538 (python3.3 fails to find)
+test: 
+	PYTHONPATH=.:$PYTHONPATH nosetests -s
 
-test:  _python3_tests_fix
-	nosetests -s
-
-coverage: _python3_tests_fix
-	nosetests --cover-html --with-coverage
+coverage: 
+	PYTHONPATH=.:$PYTHONPATH nosetests -s --cover-html --with-coverage
 	open cover/index.html
