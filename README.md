@@ -24,7 +24,7 @@ In order to override the default configuration a variable called ```ARTICLES_LIS
 The available settings are: 
 
 | Name          | Description   | Type   | Default       | Example | 
-| ------------- |:-------------:| ------:|--------------:|--------:|
+| ------------- |---------------| -------|---------------|---------|
 | output_path   | Ability to use another root instead of the default one | string | OUTPUT_PATH   |  "/path/to/output" |
 | base          | Base path of where the files will be created      | string | /articles_list| "/list/of/articles" |
 | filename      | Base name for the files that will be created      | string | articles_list |  "list" |
