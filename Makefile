@@ -22,8 +22,8 @@ clean:
 	rm -rf cover/
 
 test: 
-	PYTHONPATH=.:$PYTHONPATH nosetests -s
+	PYTHONPATH=.:$(PYTHONPATH) nosetests -s
 
 coverage: 
-	PYTHONPATH=.:$PYTHONPATH nosetests -s --cover-html --with-coverage
+	PYTHONPATH=.:$(PYTHONPATH) nosetests -s --cover-html --with-coverage
 	open cover/index.html
