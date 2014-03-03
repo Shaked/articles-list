@@ -12,7 +12,8 @@ class Creator():
                 if True == articles_list_settings['is_rendered_html']:
                     values['html'] = parser.generate_output(
                         article,
-                        articles_list_settings['templates']
+                        articles_list_settings['templates'],
+                        file_num,
                     )
 
                 for key in articles_list_settings['article_attrs']:

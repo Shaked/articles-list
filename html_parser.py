@@ -19,12 +19,12 @@ class Parser():
     def __exit__(self):
         shutil.rmtree(self.output_path)
 
-    def generate_output(self, article, templates):
+    def generate_output(self, article, templates, file_num):
         settings = self.settings
         settings['TEMPLATE_PAGES'] = templates
 
         generator = TemplatePagesGenerator(
-            context={'article': article},
+            context={'article': article, 'current_page': file_num},
             settings=settings,
             path=settings['PATH'],
             theme=settings['THEME'],
